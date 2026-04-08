@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Hyn's House – Tìm kiếm và đặt phòng homestay đẹp nhất Việt Nam. Luxury stays, cozy vibes." />
+  <title>Hyn's House – Find Your Perfect Stay</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loading-screen" class="loading-screen">
+
+    <!-- Background image with Ken Burns effect and depth -->
+    <div class="bg-layer" id="bgLayer">
+      <!-- Primary hero image (beach/luxury vibes) -->
+      <div class="bg-img bg-img--1" id="bgImg1" style="background-image: url('assets/images/anh-loadinh-1.png')">
+        <div class="image-overlay"></div>
+      </div>
+      <!-- Secondary hero image (interior/cozy vibes) -->
+      <div class="bg-img bg-img--2" id="bgImg2" style="background-image: url('assets/images/anh-loadinh-1.png')">
+        <div class="image-overlay"></div>
+      </div>
+    </div>
+
+    <!-- Cinematic gradient overlay with depth -->
+    <div class="overlay"></div>
+    <!-- Additional depth layer for premium feel -->
+    <div class="depth-layer"></div>
+
+    <!-- Floating particles -->
+    <div class="particles" id="particles">
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+      <span class="particle"></span>
+    </div>
+
+    <!-- ===== MOBILE LAYOUT ===== -->
+    <div class="mobile-ui">
+
+
+      <!-- Center content -->
+      <div class="center-content">
+        <!-- Logo glass card -->
+        <div class="logo-glass" id="logoGlass">
+          <div class="logo-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 2L28 10V28H4V10L16 2Z" fill="white" opacity="0.15" stroke="white" stroke-width="1.5" />
+              <path d="M11 28V19C11 17.343 12.343 16 14 16H18C19.657 16 21 17.343 21 19V28" stroke="white"
+                stroke-width="1.5" />
+              <circle cx="16" cy="11" r="2.5" fill="white" opacity="0.9" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-brand">Hyn's House</span>
+            <span class="logo-tagline">Luxury Homestay</span>
+          </div>
+        </div>
+
+        <!-- Tagline -->
+        <div class="tagline-block" id="taglineBlock">
+          <p class="tagline-main">Your perfect getaway..<span
+              class="dots-anim"><span>.</span><span>.</span><span>.</span></span></p>
+          <p class="tagline-sub">KHÁM PHÁ KHÔNG GIAN DÀNH RIÊNG CHO BẠN</p>
+        </div>
+      </div>
+
+      <!-- Bottom loading section -->
+      <div class="bottom-section">
+        <!-- Loading bar -->
+        <div class="loading-bar-wrapper" id="loadingBarWrapper">
+          <div class="loading-bar-track">
+            <div class="loading-bar-fill" id="loadingBarFill"></div>
+          </div>
+          <span class="loading-percent" id="loadingPercent">0%</span>
+        </div>
+
+        <!-- Bottom decorative text -->
+        <p class="bottom-label">PRIVATE SPACE • FULL AMENITIES • 24/7 SUPPORT</p>
+
+        <!-- Scroll indicator (shown after load) -->
+        <div class="scroll-hint hidden" id="scrollHint">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+          <span>Khám phá ngay</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===== DESKTOP SIDE PANEL ===== -->
+    <div class="desktop-panel" id="desktopPanel">
+      <div class="panel-glass">
+
+        <!-- Logo -->
+        <div class="panel-logo">
+          <div class="panel-logo-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 2L28 10V28H4V10L16 2Z" fill="white" opacity="0.2" stroke="white" stroke-width="1.5" />
+              <path d="M11 28V19C11 17.343 12.343 16 14 16H18C19.657 16 21 17.343 21 19V28" stroke="white"
+                stroke-width="1.5" />
+              <circle cx="16" cy="11" r="2.5" fill="white" opacity="0.9" />
+            </svg>
+          </div>
+          <span class="panel-brand">Hyn's House</span>
+        </div>
+
+        <!-- Divider -->
+        <div class="panel-divider"></div>
+
+        <!-- Headline -->
+        <div class="panel-headline">
+          <h1 class="panel-title">Chào mừng đến với<br />không gian của <em>sự bình yên</em></h1>
+          <p class="panel-subtitle">Bỏ lại những ồn ào phố thị, Hyn's House mang đến cho bạn một góc nhỏ thư giãn với thiết kế gỗ ấm cúng và tiện nghi trọn vẹn.</p>
+        </div>
+
+        <!-- Feature list -->
+        <ul class="panel-features">
+          <li class="panel-feature-item">
+            <span class="feature-icon">🌿</span>
+            <span>Không gian xanh, ban công thoáng đãng</span>
+          </li>
+          <li class="panel-feature-item">
+            <span class="feature-icon">🛏️</span>
+            <span>Nội thất gỗ sồi cao cấp, ấm cúng</span>
+          </li>
+          <li class="panel-feature-item">
+            <span class="feature-icon">📍</span>
+            <span>Vị trí trung tâm, cách biển 5 phút</span>
+          </li>
+        </ul>
+
+        <!-- Loading section -->
+        <div class="panel-loading">
+          <div class="panel-loading-label">
+            <span>Đang chuẩn bị không gian cho bạn...</span>
+            <span id="panelPercent">0%</span>
+          </div>
+          <div class="panel-bar-track">
+            <div class="panel-bar-fill" id="panelBarFill"></div>
+          </div>
+        </div>      
+      </div>
+    </div>
+
+  </div>
+  <!-- ========== END LOADING SCREEN ========== -->
+
+
+  <!-- ========== MAIN APP (shown after loading) ========== -->
+  <div id="main-app" class="main-app hidden">
+    <div class="app-placeholder">
+       <h2>Hyn's House ✨</h2>
+       <p>Đang chuyển hướng đến Dashboard...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

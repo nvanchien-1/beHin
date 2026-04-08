@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Hyn's House – Villa Biển Đà Nẵng. Thông tin phòng, tiện ích, ẩm thực và điểm vui chơi xung quanh." />
+  <title>Hyn's House – Villa Biển Đà Nẵng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <!-- ===== STICKY HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="header-logo">
+        <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2L28 10V28H4V10L16 2Z" fill="#C9A96E" opacity="0.3" stroke="#C9A96E" stroke-width="1.5" />
+          <path d="M11 28V19C11 17.343 12.343 16 14 16H18C19.657 16 21 17.343 21 19V28" stroke="#C9A96E"
+            stroke-width="1.5" />
+          <circle cx="16" cy="11" r="2.5" fill="#C9A96E" />
+        </svg>
+        <span>Hyn's House</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#gallery">Không gian</a>
+        <a href="#amenities">Tiện ích</a>
+        <a href="#rules">Nội quy</a>
+        <a href="#policy">Chính sách</a>
+        <a href="#food">Ẩm thực</a>
+        <a href="#places">Khám phá</a>
+        <a href="#location">Vị trí</a>
+      </nav>
+      <a href="#contact" class="btn-book">Liên hệ chủ nhà</a>
+    </div>
+  </header>
+
+  <!-- ===== HERO BANNER (full-width) ===== -->
+  <section class="hero-banner" id="hero">
+
+    <!-- Full-width main image -->
+    <div class="banner-wrap">
+      <img src="assets/images/real_door.jpg" alt="beHin – Hyn's House" class="banner-img" id="bannerImg" />
+      <div class="banner-overlay"></div>
+
+      <!-- Badge on image -->
+      <div class="banner-badge">
+        <span class="badge-star">★</span>
+        <span>4.98</span>
+        <span class="badge-sep">·</span>
+        <span>128 đánh giá</span>
+      </div>
+
+      <!-- Bottom title overlay -->
+      <div class="banner-title-overlay">
+        <div class="hero-tags">
+          <span class="tag">🏡 Hyn's House</span>
+          <span class="tag">🌿 Không gian xanh</span>
+          <span class="tag">☀️ Ánh sáng tự nhiên</span>
+        </div>
+        <h1 class="banner-title">Hyn's House – Nơi nghỉ ngơi bình yên giữa lòng thành phố</h1>
+        <p class="banner-location">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          Đà Nẵng, Việt Nam
+        </p>
+      </div>
+    </div>
+
+    <!-- Thumbnail strip -->
+    <div class="banner-thumbs">
+      <div class="banner-thumb active" onclick="switchBanner('assets/images/real_door.jpg', this)">
+        <img src="assets/images/real_door.jpg" alt="Cửa vào Hyn's House" />
+      </div>
+      <div class="banner-thumb" onclick="switchBanner('assets/images/real_exterior.jpg', this)">
+        <img src="assets/images/real_exterior.jpg" alt="Ngoài cửa" />
+      </div>
+      <div class="banner-thumb" onclick="switchBanner('assets/images/real_interior.jpg', this)">
+        <img src="assets/images/real_interior.jpg" alt="Hành lang nội thất" />
+      </div>
+      <div class="banner-thumb" onclick="switchBanner('assets/images/real_room.jpg', this)">
+        <img src="assets/images/real_room.jpg" alt="Phòng & ban công" />
+      </div>
+    </div>
+
+    <!-- Info bar below banner -->
+    <div class="banner-info-bar">
+      <!-- Stats -->
+      <div class="banner-stats">
+        <div class="stat-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="3" width="20" height="18" rx="2" />
+            <path d="M2 9h20" />
+          </svg>
+          <span class="stat-val">45 m²</span>
+          <span class="stat-lbl">Diện tích</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+          </svg>
+          <span class="stat-val">2 – 4</span>
+          <span class="stat-lbl">Sức chứa</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 9V7a2 2 0 012-2h16a2 2 0 012 2v2M2 9h20M2 9v11a2 2 0 002 2h16a2 2 0 002-2V9" />
+            <path d="M10 14h4" />
+          </svg>
+          <span class="stat-val">1 King · 1 Sofa</span>
+          <span class="stat-lbl">Giường ngủ</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+            <polyline points="9,22 9,12 15,12 15,22" />
+          </svg>
+          <span class="stat-val">2 phòng</span>
+          <span class="stat-lbl">Phòng tắm</span>
+        </div>
+      </div>
+
+      <!-- Price + CTA -->
+      <div class="banner-price">
+        <div class="price-main">
+          <span class="price-num">1.850.000 ₫</span>
+          <span class="price-per">/ đêm</span>
+        </div>
+        <a href="#contact" class="btn-primary">📞 Liên hệ chủ nhà</a>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Không gian sống</h2>
+        <p class="section-sub">Thiết kế hiện đại, ngập tràn ánh sáng tự nhiên với đầy đủ tiện nghi cho kỳ nghỉ của bạn.
+        </p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="assets/images/room1.png" alt="Phòng ngủ chính" loading="lazy" />
+          <div class="gallery-label">Phòng ngủ chính</div>
+        </div>
+        <div class="gallery-card">
+          <img src="assets/images/room2.png" alt="Phòng khách" loading="lazy" />
+          <div class="gallery-label">Phòng khách & bếp</div>
+        </div>
+        <div class="gallery-card">
+          <img src="assets/images/room3.png" alt="Hồ bơi ngoài trời" loading="lazy" />
+          <div class="gallery-label">Hồ bơi riêng & sân vườn</div>
+        </div>
+        <div class="gallery-card">
+          <img src="assets/images/hero_interior.png" alt="Không gian nội thất" loading="lazy" />
+          <div class="gallery-label">Nội thất cao cấp</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AMENITIES SECTION ===== -->
+  <section class="section section-alt" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tiện ích nổi bật</h2>
+        <p class="section-sub">Tất cả những gì bạn cần cho một kỳ nghỉ hoàn hảo.</p>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon">📶</div>
+          <span class="amenity-name">WiFi tốc độ cao</span>
+          <span class="amenity-desc">Fibernet 500Mbps</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">❄️</div>
+          <span class="amenity-name">Điều hòa 2 chiều</span>
+          <span class="amenity-desc">Mỗi phòng</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">📺</div>
+          <span class="amenity-name">Smart TV 65"</span>
+          <span class="amenity-desc">Netflix · YouTube</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🍳</div>
+          <span class="amenity-name">Bếp đầy đủ</span>
+          <span class="amenity-desc">Nồi cơm · Lò vi sóng</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🏊</div>
+          <span class="amenity-name">Hồ bơi riêng</span>
+          <span class="amenity-desc">Ngoài trời 10x4m</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🚗</div>
+          <span class="amenity-name">Bãi đỗ xe</span>
+          <span class="amenity-desc">Miễn phí, có mái che</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🧺</div>
+          <span class="amenity-name">Máy giặt riêng</span>
+          <span class="amenity-desc">Máy sấy đi kèm</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">☕</div>
+          <span class="amenity-name">Coffee & Trà</span>
+          <span class="amenity-desc">Máy pha cà phê</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🛁</div>
+          <span class="amenity-name">Bồn tắm</span>
+          <span class="amenity-desc">Phòng tắm master</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🔑</div>
+          <span class="amenity-name">Khoá thông minh</span>
+          <span class="amenity-desc">Check-in tự động</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🍹</div>
+          <span class="amenity-name">Đồ uống welcome</span>
+          <span class="amenity-desc">Fruit basket + nước</span>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon">🧴</div>
+          <span class="amenity-name">Đồ dùng cao cấp</span>
+          <span class="amenity-desc">L'Occitane toiletries</span>
+        </div>
+      </div>
+
+      <!-- Pricing table -->
+      <div class="pricing-section">
+        <h3 class="pricing-title">Bảng giá & Phụ phí</h3>
+        <div class="pricing-table">
+          <div class="price-row">
+            <span>Giá phòng (2 khách)</span>
+            <span class="price-val">1.850.000 ₫ / đêm</span>
+          </div>
+          <div class="price-row">
+            <span>Thêm khách (mỗi người)</span>
+            <span class="price-val">200.000 ₫ / đêm</span>
+          </div>
+          <div class="price-row">
+            <span>Phí vệ sinh</span>
+            <span class="price-val">300.000 ₫ / lần</span>
+          </div>
+          <div class="price-row">
+            <span>Đặt cọc</span>
+            <span class="price-val">1.000.000 ₫ (hoàn)</span>
+          </div>
+          <div class="price-row price-row--highlight">
+            <span>📅 Ở 3+ đêm</span>
+            <span class="price-val price-discount">Giảm 10%</span>
+          </div>
+          <div class="price-row price-row--highlight">
+            <span>📅 Ở 7+ đêm</span>
+            <span class="price-val price-discount">Giảm 20%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOUSE RULES SECTION ===== -->
+  <section class="section" id="rules">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nội quy nhà</h2>
+        <p class="section-sub">Vui lòng đọc kỹ để kỳ nghỉ của bạn diễn ra suôn sẻ và thoải mái nhất.</p>
+      </div>
+      <div class="rules-list-container">
+        <ol class="rules-list-numbered">
+          <li>
+            <h3>📋 Xuất trình giấy tờ</h3>
+            <p>Vui lòng cung cấp hộ chiếu/thị thực hoặc CCCD để làm thủ tục nhận phòng với quản lý homestay.</p>
+          </li>
+          <li>
+            <h3>🕐 Nhận và trả phòng</h3>
+            <p><strong>Thời gian nhận phòng:</strong> Sau 14h | <strong>Thời gian trả phòng:</strong> Trước 12h</p>
+          </li>
+          <li>
+            <h3>🚫 Không mang chất cấm</h3>
+            <p>Không mang súng đạn, chất cháy nổ, chất độc hại, các chất gây nghiện.</p>
+          </li>
+          <li>
+            <h3>🔇 Giữ trật tự</h3>
+            <p>Hạn chế làm ồn, hát karaoke hoặc gây ra các tiếng động lớn. Lưu ý: Quý khách vui lòng kiểm tra tư trang trước khi trả phòng. Home không chịu trách nhiệm sau khi quý khách rời đi.</p>
+          </li>
+          <li>
+            <h3>🐕 Quy định thú cưng</h3>
+            <p>Quý khách chịu trách nhiệm trong trường hợp thú cưng mang theo gây sự cố đồ dùng của home/hàng xóm.</p>
+          </li>
+          <li>
+            <h3>💼 Tự bảo quản tài sản</h3>
+            <p>Vui lòng tự bảo quản tài sản cá nhân. Mọi hư hỏng hoặc mất mát đồ của home sẽ phải bồi thường.</p>
+          </li>
+          <li>
+            <h3>🧹 Giữ gìn vệ sinh chung</h3>
+            <p>Dọn dẹp không gian chung gọn gàng trước khi trả phòng.</p>
+          </li>
+          <li>
+            <h3>✅ Tuân thủ nội quy</h3>
+            <p>Không được tự ý đưa thêm người lạ vào homestay nếu chưa có thông báo hoặc đăng ký với quản lý.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAYMENT POLICY SECTION ===== -->
+  <section class="section" id="policy">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Chính sách thanh toán</h2>
+        <p class="section-sub">Các quy định và điều khoản thanh toán tại Hyn's House</p>
+      </div>
+      <div class="policy-content">
+        <div class="policy-item">
+          <h3>1️⃣ Quy định thanh toán</h3>
+          <ul class="policy-list">
+            <li>Để xác nhận đặt phòng, khách vui lòng đặt cọc trước 50% tổng giá trị đặt phòng.</li>
+            <li>50% còn lại sẽ được thanh toán khi khách làm thủ tục nhận phòng (check-in).</li>
+            <li>Đặt phòng chỉ được xem là hoàn tất và giữ phòng khi Hyn's House đã nhận được tiền cọc.</li>
+          </ul>
+          <p class="policy-note">👉 Lưu ý: Trường hợp khách không thanh toán đúng hạn (nếu có thỏa thuận trước), Hyn's House có quyền tự động hủy giữ phòng.</p>
+        </div>
+
+        <div class="policy-item">
+          <h3>2️⃣ Chính sách hủy phòng</h3>
+          <ul class="policy-list">
+            <li><strong>Hủy trước 6 ngày trở lên</strong> (so với ngày check-in): Hoàn 100% tiền cọc</li>
+            <li><strong>Hủy trước 2 – 4 ngày:</strong> Hoàn 50% tiền cọc</li>
+            <li><strong>Hủy trong vòng 24 – 48 giờ</strong> trước ngày nhận phòng: Không hoàn tiền cọc</li>
+            <li><strong>Không đến (no-show):</strong> Không hoàn tiền (100%)</li>
+          </ul>
+          <p class="policy-note">👉 Lưu ý: Thời gian hủy được tính dựa trên thời điểm Hyn's House nhận được thông báo hủy. Việc hoàn tiền (nếu có) sẽ được xử lý trong vòng 1 – 3 ngày làm việc.</p>
+        </div>
+
+        <div class="policy-item">
+          <h3>3️⃣ Chính sách thay đổi ngày đặt phòng</h3>
+          <ul class="policy-list">
+            <li>Khách được hỗ trợ đổi ngày lưu trú trong trường hợp:<br>
+              <span class="sub-indent">• Ngày mới vẫn còn phòng trống</span><br>
+              <span class="sub-indent">• Có sự xác nhận đồng ý từ Hyn's House</span>
+            </li>
+            <li>Phụ thu khi đổi ngày: 5% trên tổng giá trị đặt phòng</li>
+            <li>Mỗi đơn đặt phòng chỉ hỗ trợ đổi ngày tối đa 01 lần</li>
+          </ul>
+          <p class="policy-note">👉 Lưu ý: Không áp dụng đổi ngày trong trường hợp khách báo quá sát giờ check-in hoặc vào các dịp cao điểm (lễ, Tết…).</p>
+        </div>
+
+        <div class="policy-item">
+          <h3>4️⃣ Quy định nhận phòng / trả phòng</h3>
+          <ul class="policy-list">
+            <li><strong>Giờ nhận phòng (check-in):</strong> từ 14:00</li>
+            <li><strong>Giờ trả phòng (check-out):</strong> trước 12:00 hôm sau</li>
+            <li><strong>Phụ thu:</strong><br>
+              <span class="sub-indent">• Trả phòng trễ 1–2 tiếng: tính phụ phí theo giờ</span><br>
+              <span class="sub-indent">• Trả phòng trễ quá 3 tiếng: tính thêm 1 đêm lưu trú</span>
+            </li>
+          </ul>
+          <p class="policy-note">👉 Lưu ý: Vui lòng thông báo trước nếu khách có nhu cầu check-in sớm hoặc check-out muộn (tùy tình trạng phòng).</p>
+        </div>
+
+        <div class="policy-item">
+          <h3>5️⃣ Trường hợp bất khả kháng</h3>
+          <ul class="policy-list">
+            <li>Các trường hợp ngoài kiểm soát như: thiên tai, dịch bệnh, chuyến bay bị hủy…</li>
+            <li>Hyn's House sẽ hỗ trợ:<br>
+              <span class="sub-indent">• Đổi ngày lưu trú linh hoạt (ưu tiên)</span><br>
+              <span class="sub-indent">• Hoặc phương án khác theo thỏa thuận giữa hai bên</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-item policy-item-last">
+          <h3>6️⃣ Điều khoản chung</h3>
+          <ul class="policy-list">
+            <li>Khách vui lòng kiểm tra kỹ thông tin trước khi đặt phòng.</li>
+            <li>Khi khách tiến hành đặt cọc, đồng nghĩa với việc đã đồng ý với toàn bộ chính sách của Hyn's House.</li>
+            <li>Hyn's House có quyền từ chối hoàn tiền trong trường hợp khách vi phạm quy định hoặc cung cấp thông tin không chính xác.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOD NEARBY SECTION ===== -->
+  <section class="section section-alt" id="food">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Ẩm thực xung quanh</h2>
+        <p class="section-sub">Những địa điểm ăn uống được chủ nhà đặc biệt gợi ý, cách homestay từ 2–15 phút đi xe.</p>
+      </div>
+      <div class="food-hero">
+        <img src="assets/images/food.png" alt="Ẩm thực Đà Nẵng" class="food-hero-img" />
+      </div>
+      <div class="food-grid">
+        <div class="food-card">
+          <div class="food-emoji">🍜</div>
+          <div class="food-info">
+            <h4>Bún Chả Cá Bà Lan</h4>
+            <p>Đặc sản Đà Nẵng số 1 · 2 phút đi xe</p>
+            <div class="food-meta">
+              <span class="food-price">💰 15–30k</span>
+              <span class="food-rating">⭐ 4.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-emoji">🦐</div>
+          <div class="food-info">
+            <h4>Mỳ Quảng Bé Vẹt</h4>
+            <p>Mỳ quảng chuẩn vị quê · 5 phút đi bộ</p>
+            <div class="food-meta">
+              <span class="food-price">💰 20–35k</span>
+              <span class="food-rating">⭐ 4.7</span>
+            </div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-emoji">🥢</div>
+          <div class="food-info">
+            <h4>Bánh Xèo Bà Dưỡng</h4>
+            <p>Bánh xèo giòn tan, nổi tiếng nhất ĐN · 8 phút</p>
+            <div class="food-meta">
+              <span class="food-price">💰 25–45k</span>
+              <span class="food-rating">⭐ 4.9</span>
+            </div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-emoji">🦀</div>
+          <div class="food-info">
+            <h4>Hải Sản Bé Mặn</h4>
+            <p>Hải sản tươi sống, cá chình, tôm hùm · 5 phút</p>
+            <div class="food-meta">
+              <span class="food-price">💰 150–400k</span>
+              <span class="food-rating">⭐ 4.6</span>
+            </div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-emoji">☕</div>
+          <div class="food-info">
+            <h4>Cà Phê Đêm View Biển</h4>
+            <p>Cà phê sáng view Mỹ Khê · ngay trước nhà</p>
+            <div class="food-meta">
+              <span class="food-price">💰 25–55k</span>
+              <span class="food-rating">⭐ 4.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="food-card">
+          <div class="food-emoji">🍺</div>
+          <div class="food-info">
+            <h4>Bia Tươi Sân Vườn</h4>
+            <p>Nhậu vỉa hè, bia hơi, đồ nướng · 3 phút</p>
+            <div class="food-meta">
+              <span class="food-price">💰 50–150k</span>
+              <span class="food-rating">⭐ 4.5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLACES NEARBY SECTION ===== -->
+  <section class="section" id="places">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Điểm vui chơi xung quanh</h2>
+        <p class="section-sub">Đà Nẵng có vô số điểm đến tuyệt vời chờ bạn khám phá.</p>
+      </div>
+      <img src="assets/images/places.png" alt="Điểm du lịch Đà Nẵng" class="places-hero-img" />
+      <div class="places-grid">
+        <div class="place-card">
+          <div class="place-header" style="background: linear-gradient(135deg,#0a7fbe,#0dd3c5)">
+            <span class="place-emoji">🏖️</span>
+          </div>
+          <div class="place-body">
+            <h4>Bãi Biển Mỹ Khê</h4>
+            <p>Một trong những bãi biển đẹp nhất châu Á. Nước trong, sóng vừa, bãi cát phẳng.</p>
+            <div class="place-footer">
+              <span class="place-dist">📍 50m từ homestay</span>
+              <span class="place-free">🆓 Miễn phí</span>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-header" style="background: linear-gradient(135deg,#8B5E3C,#C9A96E)">
+            <span class="place-emoji">⛰️</span>
+          </div>
+          <div class="place-body">
+            <h4>Ngũ Hành Sơn</h4>
+            <p>5 ngọn núi đá cẩm thạch huyền bí, chùa chiền, hang động và tượng Phật.</p>
+            <div class="place-footer">
+              <span class="place-dist">📍 2km · 5 phút</span>
+              <span class="place-fee">🎟️ 40.000 ₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-header" style="background: linear-gradient(135deg,#c0392b,#e74c3c)">
+            <span class="place-emoji">🐉</span>
+          </div>
+          <div class="place-body">
+            <h4>Cầu Rồng</h4>
+            <p>Biểu tượng Đà Nẵng. Cuối tuần phun lửa & nước lúc 21:00. Chụp ảnh cực đẹp.</p>
+            <div class="place-footer">
+              <span class="place-dist">📍 8km · 15 phút</span>
+              <span class="place-free">🆓 Miễn phí</span>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-header" style="background: linear-gradient(135deg,#2ecc71,#1abc9c)">
+            <span class="place-emoji">🌿</span>
+          </div>
+          <div class="place-body">
+            <h4>Hội An Phố Cổ</h4>
+            <p>Di sản UNESCO. Đèn lồng, phố đi bộ, thuyền sông Thu Bồn, ẩm thực đặc sắc.</p>
+            <div class="place-footer">
+              <span class="place-dist">📍 30km · 35 phút</span>
+              <span class="place-fee">🎟️ 120.000 ₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-header" style="background: linear-gradient(135deg,#8e44ad,#9b59b6)">
+            <span class="place-emoji">🚡</span>
+          </div>
+          <div class="place-body">
+            <h4>Bà Nà Hills</h4>
+            <p>Cáp treo dài nhất thế giới. Cầu Vàng, Làng Pháp, công viên giải trí trên mây.</p>
+            <div class="place-footer">
+              <span class="place-dist">📍 25km · 40 phút</span>
+              <span class="place-fee">🎟️ 750.000 ₫</span>
+            </div>
+          </div>
+        </div>
+        <div class="place-card">
+          <div class="place-header" style="background: linear-gradient(135deg,#f39c12,#e67e22)">
+            <span class="place-emoji">🛍️</span>
+          </div>
+          <div class="place-body">
+            <h4>Chợ Hàn & Cồn</h4>
+            <p>Mua sắm đặc sản Đà Nẵng, tôm khô, mắm nêm, bánh tráng cuốn thịt heo.</p>
+            <div class="place-footer">
+              <span class="place-dist">📍 10km · 20 phút</span>
+              <span class="place-free">🆓 Miễn phí</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCATION SECTION ===== -->
+  <section class="section section-alt" id="location">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Vị trí</h2>
+        <p class="section-sub">Liên hệ chủ nhà để nhận địa chỉ chính xác và hướng dẫn đến nơi.</p>
+      </div>
+      <div class="location-wrapper">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7!2d108.2575!3d15.9671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421275d9952e5b%3A0x6ac82b9fc7de1ee4!2sNg%C5%A9%20H%C3%A0nh%20S%C6%A1n%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng%2C%20Vietnam!5e0!3m2!1sen!2s!4v1617000000000!5m2!1sen!2s"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Vị trí beHin Homestay">
+          </iframe>
+        </div>
+        <div class="location-info">
+          <div class="loc-item">
+            <div class="loc-icon">📍</div>
+            <div>
+              <strong>Địa chỉ</strong>
+              <p>Ngũ Hành Sơn, Đà Nẵng<br />(chi tiết gửi sau khi xác nhận)</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">✈️</div>
+            <div>
+              <strong>Sân bay Đà Nẵng</strong>
+              <p>Cách 12km · ~20 phút taxi<br />Giá taxi: 150–200k ₫</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">🏖️</div>
+            <div>
+              <strong>Bãi biển Mỹ Khê</strong>
+              <p>Cách 50m · đi bộ 1 phút</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">🏪</div>
+            <div>
+              <strong>Tiện ích gần nhà</strong>
+              <p>Circle K · 100m | AEON · 2km<br />Cửa hàng tiện lợi · 50m</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon">🚗</div>
+            <div>
+              <strong>Di chuyển</strong>
+              <p>Thuê xe máy: 120k/ngày<br />Grab/Taxi: luôn có sẵn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / SUPPORT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Liên hệ & Hỗ trợ</h2>
+        <p class="section-sub">Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7. Nhắn tin hoặc gọi điện để được tư vấn ngay.</p>
+      </div>
+
+      <!-- Contact cards – full width, 2 columns -->
+      <div class="contact-channels contact-channels--wide">
+        <a href="tel:+84905123456" class="contact-card contact-card--phone">
+          <div class="contact-icon">📞</div>
+          <div class="contact-info">
+            <strong>Gọi điện</strong>
+            <span>0905 123 456</span>
+            <span class="contact-note">Phản hồi ngay lập tức</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a href="https://zalo.me/0905123456" target="_blank" class="contact-card contact-card--zalo">
+          <div class="contact-icon">💬</div>
+          <div class="contact-info">
+            <strong>Zalo</strong>
+            <span>0905 123 456</span>
+            <span class="contact-note">Nhắn tin nhanh nhất</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a href="https://m.me/behinhomestay" target="_blank" class="contact-card contact-card--fb">
+          <div class="contact-icon">💙</div>
+          <div class="contact-info">
+            <strong>Facebook</strong>
+            <span>beHin Homestay</span>
+            <span class="contact-note">Fanpage chính thức</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+        <a href="mailto:hello@behin.vn" class="contact-card contact-card--email">
+          <div class="contact-icon">📧</div>
+          <div class="contact-info">
+            <strong>Email</strong>
+            <span>hello@behin.vn</span>
+            <span class="contact-note">Phản hồi trong 2 giờ</span>
+          </div>
+          <span class="contact-arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Host info -->
+      <div class="host-card">
+        <div class="host-avatar">👩</div>
+        <div class="host-info">
+          <h4>Chủ nhà: Thanh Hà</h4>
+          <p>Siêu chủ nhà · Đà Nẵng · Thành viên từ 2020</p>
+          <div class="host-stats">
+            <span>⭐ 4.98 đánh giá</span>
+            <span>•</span>
+            <span>128 lượt đặt</span>
+            <span>•</span>
+            <span>⚡ Phản hồi trong 1h</span>
+          </div>
+          <p class="host-bio">"Mình yêu Đà Nẵng và muốn chia sẻ vẻ đẹp của thành phố này đến mọi người. Hy vọng căn
+            villa nhỏ của mình sẽ là nơi lưu giữ những kỷ niệm đẹp của bạn! 🌊"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2L28 10V28H4V10L16 2Z" fill="#C9A96E" opacity="0.4" stroke="#C9A96E" stroke-width="1.5" />
+          <path d="M11 28V19C11 17.343 12.343 16 14 16H18C19.657 16 21 17.343 21 19V28" stroke="#C9A96E"
+            stroke-width="1.5" />
+          <circle cx="16" cy="11" r="2.5" fill="#C9A96E" />
+        </svg>
+        <span>beHin</span>
+      </div>
+      <p>© 2026 beHin · Luxury Homestay Vietnam · Đà Nẵng</p>
+      <div class="footer-links">
+        <a href="#">Chính sách hoàn tiền</a>
+        <a href="#">Điều khoản</a>
+        <a href="#">Bảo mật</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating contact buttons -->
+  <div class="float-contacts">
+    <a href="https://zalo.me/0905123456" target="_blank" class="float-btn float-btn--zalo" title="Zalo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      </svg>
+    </a>
+    <a href="tel:+84905123456" class="float-btn float-btn--phone" title="Gọi ngay">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <path
+          d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.82a19.79 19.79 0 01-3.07-8.67A2 2 0 011.91 1H5a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.91l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-top hidden" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
