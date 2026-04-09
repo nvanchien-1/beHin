@@ -198,7 +198,7 @@ a { text-decoration: none; color: inherit; }
 /* Title overlay – bottom center */
 .banner-title-overlay {
   position: absolute;
-  top: 50%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 0;
@@ -261,8 +261,8 @@ a { text-decoration: none; color: inherit; }
 /* ---- Thumbnail strip ---- */
 .banner-thumbs {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  bottom: 20px;
+  left: 20px;
   display: flex;
   gap: 12px;
   padding: 0;
