@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test OSRM Distance Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 { color: #333; }
+    .results {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #4CAF50;
+      color: white;
+    }
+    tr:hover { background: #f9f9f9; }
+    .loading { color: #666; font-style: italic; }
+    .success { color: #4CAF50; }
+    .error { color: #f44336; }
+  </style>
+</head>
+<body>
+  <h1>🗺️ OSRM Distance Calculator - Test</h1>
+  <p>Tính khoảng cách chính xác từ Homestead tới các điểm (sử dụng OSRM)</p>
+  
+  <div class="results">
+    <div id="status" class="loading">⏳ Đang tính khoảng cách...</div>
+    <table id="resultsTable" style="display:none;">
+      <thead>
+        <tr>
+          <th>Địa Điểm</th>
+          <th>Khoảng Cách</th>
+          <th>Thời Gian (Ước Tính)</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const HOMESTAY = { lat: 15.97444, lng: 108.22065 };
+    
+    const DESTINATIONS = {
+      'Bãi Biển Mỹ Khê': { lat: 15.9840, lng: 108.2300 },
+      'Ngũ Hành Sơn': { lat: 15.94, lng: 108.22 },
+      'Cầu Rồng': { lat: 15.9837, lng: 108.2348 },
+      'Hội An Phố Cổ': { lat: 15.8787, lng: 108.3383 },
+      'Bà Nà Hills': { lat: 15.9450, lng: 108.0850 },
+      'Chợ Hàn & Cồn': { lat: 16.0247, lng: 108.2183 },
+      'Bún Chả Cá Bà Lan': { lat: 15.9800, lng: 108.2250 },
+      'Mỳ Quảng Bé Vẹt': { lat: 15.9850, lng: 108.2200 },
+      'Bánh Xèo Bà Dưỡng': { lat: 15.9900, lng: 108.2150 },
+      'Hải Sản Bé Mặn': { lat: 15.9750, lng: 108.2300 },
+      'Cà Phê Đêm View Biển': { lat: 15.9840, lng: 108.2250 },
+      'Bia Tươi Sân Vườn': { lat: 15.9800, lng: 108.2280 },
+    };
+
+    async function calculateDistances() {
+      const tbody = document.getElementById('tbody');
+      let completed = 0;
+      let errors = 0;
+
+      for (const [name, dest] of Object.entries(DESTINATIONS)) {
+        try {
+          // Gọi OSRM
+          const url = `https://router.project-osrm.org/route/v1/driving/${HOMESTAY.lng},${HOMESTAY.lat};${dest.lng},${dest.lat}?overview=false`;
+          const response = await fetch(url);
+          const data = await response.json();
+
+          let distanceText = 'N/A';
+          let timeText = 'N/A';
+
+          if (data.code === 'Ok' && data.routes && data.routes.length > 0) {
+            const route = data.routes[0];
+            const meters = route.distance;
+            const seconds = route.duration;
+
+            // Format distance
+            if (meters >= 1000) {
+              distanceText = `${(meters / 1000).toFixed(1)}km`;
+            } else {
+              distanceText = `${Math.round(meters)}m`;
+            }
+
+            // Format time
+            const minutes = Math.round(seconds / 60);
+            if (minutes < 60) {
+              timeText = `${minutes} phút`;
+            } else {
+              const hours = Math.floor(minutes / 60);
+              const mins = minutes % 60;
+              timeText = `${hours}h${mins > 0 ? ` ${mins}m` : ''}`;
+            }
+
+            completed++;
+          } else {
+            errors++;
+          }
+
+          // Add row
+          const row = tbody.insertRow();
+          row.innerHTML = `
+            <td><strong>${name}</strong></td>
+            <td>${distanceText}</td>
+            <td>${timeText}</td>
+          `;
+
+        } catch (error) {
+          errors++;
+          const row = tbody.insertRow();
+          row.innerHTML = `
+            <td><strong>${name}</strong></td>
+            <td colspan="2" class="error">❌ Lỗi: ${error.message}</td>
+          `;
+        }
+
+        // Delay to avoid rate limiting
+        await new Promise(resolve => setTimeout(resolve, 500));
+      }
+
+      // Show results
+      document.getElementById('resultsTable').style.display = 'table';
+      const statusDiv = document.getElementById('status');
+      if (errors === 0) {
+        statusDiv.innerHTML = `<span class="success">✅ Tính xong! (${completed}/${Object.keys(DESTINATIONS).length})</span>`;
+      } else {
+        statusDiv.innerHTML = `<span class="success">✅ Tính xong: ${completed} thành công, ${errors} lỗi</span>`;
+      }
+    }
+
+    // Auto-calculate on load
+    calculateDistances();
+  </script>
+</body>
+</html>

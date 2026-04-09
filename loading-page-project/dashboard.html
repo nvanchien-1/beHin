@@ -51,12 +51,7 @@
       <div class="banner-overlay"></div>
 
       <!-- Badge on image -->
-      <div class="banner-badge">
-        <span class="badge-star">★</span>
-        <span>4.98</span>
-        <span class="badge-sep">·</span>
-        <span>128 đánh giá</span>
-      </div>
+
 
       <!-- Bottom title overlay -->
       <div class="banner-title-overlay">
@@ -152,29 +147,377 @@
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Không gian sống</h2>
-        <p class="section-sub">Thiết kế hiện đại, ngập tràn ánh sáng tự nhiên với đầy đủ tiện nghi cho kỳ nghỉ của bạn.
-        </p>
+        <p class="section-sub">Khám phá từng góc nhỏ của Hyn's House — nơi mỗi không gian đều được chăm chút tỉ mỉ để
+          bạn cảm thấy như ở nhà.</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="assets/images/room1.png" alt="Phòng ngủ chính" loading="lazy" />
-          <div class="gallery-label">Phòng ngủ chính</div>
-        </div>
-        <div class="gallery-card">
-          <img src="assets/images/room2.png" alt="Phòng khách" loading="lazy" />
-          <div class="gallery-label">Phòng khách & bếp</div>
-        </div>
-        <div class="gallery-card">
-          <img src="assets/images/room3.png" alt="Hồ bơi ngoài trời" loading="lazy" />
-          <div class="gallery-label">Hồ bơi riêng & sân vườn</div>
-        </div>
-        <div class="gallery-card">
-          <img src="assets/images/hero_interior.png" alt="Không gian nội thất" loading="lazy" />
-          <div class="gallery-label">Nội thất cao cấp</div>
-        </div>
+
+      <!-- Room tabs -->
+      <div class="room-tabs" id="roomTabs">
+        <button class="room-tab active" data-room="phong_1" onclick="switchRoom('phong_1', this)">🛏️ Phòng ngủ
+          1</button>
+        <button class="room-tab" data-room="phong_2" onclick="switchRoom('phong_2', this)">🛌 Phòng ngủ 2</button>
+        <button class="room-tab" data-room="phong_khach" onclick="switchRoom('phong_khach', this)">🛋️ Phòng
+          khách</button>
+        <button class="room-tab" data-room="phong_bep" onclick="switchRoom('phong_bep', this)">🍳 Bếp & Ăn</button>
+        <button class="room-tab" data-room="view" onclick="switchRoom('view', this)">🌿 View & Ngoại thất</button>
       </div>
+
+      <!-- Room panels -->
+      <div class="room-panels">
+
+        <!-- PHÒNG NGỦ 1 -->
+        <div class="room-panel active" id="panel-phong_1">
+          <div class="room-hero-slider" id="slider-phong_1">
+            <div class="slider-track" id="track-phong_1">
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830969476_a82ced091ed9dd26c9cfbc2503d20252.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830969476_a82ced091ed9dd26c9cfbc2503d20252.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830969802_fb29a08de2c26fad1ea3d20c2ea04933.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830969802_fb29a08de2c26fad1ea3d20c2ea04933.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830970097_a06875f7efb944adf938db9f0b76c4f2.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830970097_a06875f7efb944adf938db9f0b76c4f2.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830970215_1bd14310d44a46b16580913aa5996a97.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830970215_1bd14310d44a46b16580913aa5996a97.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830970846_7c374bbf8f2d5c793a6e4ac4d42ead09.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830970846_7c374bbf8f2d5c793a6e4ac4d42ead09.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830971065_964bdad32c1e5c5137ace82d0dbc621e.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830971065_964bdad32c1e5c5137ace82d0dbc621e.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830971344_148aaaae6ab8d14d10372b838c75ec9f.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830971344_148aaaae6ab8d14d10372b838c75ec9f.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830971527_6b5bd09c0b621f8bf63696c142192ad0.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830971527_6b5bd09c0b621f8bf63696c142192ad0.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830971919_9349113ce613fe61e1d400cdc9b29587.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830971919_9349113ce613fe61e1d400cdc9b29587.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830972081_b931c02e67ee5aaae77488734ec4e38b.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830972081_b931c02e67ee5aaae77488734ec4e38b.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830972802_4a16f7f94c11787543def7eace90718b.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830972802_4a16f7f94c11787543def7eace90718b.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830973543_fe1b4f516d97dfb7c1d01b4a34a10796.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830973543_fe1b4f516d97dfb7c1d01b4a34a10796.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_1/z7705830973611_9f4dda0101cce202b68e2c94c9eafb2e.jpg', 'Phòng ngủ 1')">
+                <img src="assets/anhhin/phong_1/z7705830973611_9f4dda0101cce202b68e2c94c9eafb2e.jpg" alt="Phòng ngủ 1"
+                  loading="lazy" /></div>
+            </div>
+            <button class="slider-btn slider-prev" onclick="slideRoom('phong_1', -1)">‹</button>
+            <button class="slider-btn slider-next" onclick="slideRoom('phong_1', 1)">›</button>
+            <div class="slider-dots" id="dots-phong_1"></div>
+          </div>
+          <div class="room-info-bar"><span class="room-badge">🛏️ Phòng ngủ 1</span><span class="room-count">13
+              ảnh</span></div>
+        </div>
+
+        <!-- PHÒNG NGỦ 2 -->
+        <div class="room-panel" id="panel-phong_2">
+          <div class="room-hero-slider" id="slider-phong_2">
+            <div class="slider-track" id="track-phong_2">
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830994707_22e797e8a7b62416851a18f0ccb04e57.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830994707_22e797e8a7b62416851a18f0ccb04e57.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830995567_6c39319412c23f90d2507053e6e996e8.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830995567_6c39319412c23f90d2507053e6e996e8.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830995827_06447d9e2cba7e59544a5e99f9b6ecbc.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830995827_06447d9e2cba7e59544a5e99f9b6ecbc.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830996915_228f52e67e1ffd3a4e1855f9b15b0eb6.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830996915_228f52e67e1ffd3a4e1855f9b15b0eb6.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830996977_9d3f36e299e0f74e3f91e35bf3cb5766.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830996977_9d3f36e299e0f74e3f91e35bf3cb5766.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830997122_cc01ef8b14f1b484098a28e6708a3b1a.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830997122_cc01ef8b14f1b484098a28e6708a3b1a.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830998697_df5bdaf7e995f55a16500f1376af436b.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830998697_df5bdaf7e995f55a16500f1376af436b.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705830998998_afec1f1e17396c780a07e90d37984591.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705830998998_afec1f1e17396c780a07e90d37984591.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705831027522_93a92131179ed8fe1e83d01069d52983.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705831027522_93a92131179ed8fe1e83d01069d52983.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705831027692_b00603fd1a191d4b7fa95754efc66b0f.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705831027692_b00603fd1a191d4b7fa95754efc66b0f.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705831028363_bcab0185f31fa53c85484c2358306250.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705831028363_bcab0185f31fa53c85484c2358306250.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_2/z7705831028653_9e35a0c9c0748e93620ffd572c41793c.jpg', 'Phòng ngủ 2')">
+                <img src="assets/anhhin/phong_2/z7705831028653_9e35a0c9c0748e93620ffd572c41793c.jpg" alt="Phòng ngủ 2"
+                  loading="lazy" /></div>
+            </div>
+            <button class="slider-btn slider-prev" onclick="slideRoom('phong_2', -1)">‹</button>
+            <button class="slider-btn slider-next" onclick="slideRoom('phong_2', 1)">›</button>
+            <div class="slider-dots" id="dots-phong_2"></div>
+          </div>
+          <div class="room-info-bar"><span class="room-badge">🛌 Phòng ngủ 2</span><span class="room-count">12
+              ảnh</span></div>
+        </div>
+
+        <!-- PHÒNG KHÁCH -->
+        <div class="room-panel" id="panel-phong_khach">
+          <div class="room-hero-slider" id="slider-phong_khach">
+            <div class="slider-track" id="track-phong_khach">
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831083398_eae84a5e7650139b65b5e62e8536202f.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831083398_eae84a5e7650139b65b5e62e8536202f.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831083512_6419fa0f7b7bf10e47d09e43c7f95afd.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831083512_6419fa0f7b7bf10e47d09e43c7f95afd.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831084610_9e184cdfab4ceb3becba1f4aa363e884.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831084610_9e184cdfab4ceb3becba1f4aa363e884.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831084856_3d6948fb9bea446562d2f476ec93aa9a.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831084856_3d6948fb9bea446562d2f476ec93aa9a.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831084907_df47053a89a7f49a0f3a7b00ba01d025.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831084907_df47053a89a7f49a0f3a7b00ba01d025.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831085010_070c34d5ecc6bea3c1bad1fa40fa6c0a.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831085010_070c34d5ecc6bea3c1bad1fa40fa6c0a.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831085341_1423c50d5d0756beca84960831fb1371.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831085341_1423c50d5d0756beca84960831fb1371.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831086311_f08a330de3092453e42430d664723bf1.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831086311_f08a330de3092453e42430d664723bf1.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831086426_9c6793560ae1344ec6608903da3e3cf6.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831086426_9c6793560ae1344ec6608903da3e3cf6.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831086534_b692962cefeb7010aaa3d1b31947022e.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831086534_b692962cefeb7010aaa3d1b31947022e.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831086813_7a7a6f8b89f60ee15fc1f499e5f7b940.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831086813_7a7a6f8b89f60ee15fc1f499e5f7b940.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_khach/z7705831087508_9726000e1f0ed97770bd3b12477aea2e.jpg', 'Phòng khách')">
+                <img src="assets/anhhin/phong_khach/z7705831087508_9726000e1f0ed97770bd3b12477aea2e.jpg"
+                  alt="Phòng khách" loading="lazy" /></div>
+            </div>
+            <button class="slider-btn slider-prev" onclick="slideRoom('phong_khach', -1)">‹</button>
+            <button class="slider-btn slider-next" onclick="slideRoom('phong_khach', 1)">›</button>
+            <div class="slider-dots" id="dots-phong_khach"></div>
+          </div>
+          <div class="room-info-bar"><span class="room-badge">🛋️ Phòng khách</span><span class="room-count">12
+              ảnh</span></div>
+        </div>
+
+        <!-- BẾP & ĂN -->
+        <div class="room-panel" id="panel-phong_bep">
+          <div class="room-hero-slider" id="slider-phong_bep">
+            <div class="slider-track" id="track-phong_bep">
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831039073_c277f72b63dc82555a34c7f036114e62.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831039073_c277f72b63dc82555a34c7f036114e62.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831039090_1adcc37e075cdfdb6f228b86e43dbbe0.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831039090_1adcc37e075cdfdb6f228b86e43dbbe0.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831039255_9444e15f36c99d5fefd7acd5dc441e0c.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831039255_9444e15f36c99d5fefd7acd5dc441e0c.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831039344_3e2cc621ef123ba0a98ab4ba1ffd610b.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831039344_3e2cc621ef123ba0a98ab4ba1ffd610b.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831040091_d9f60e47749a0565680e5484add010ea.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831040091_d9f60e47749a0565680e5484add010ea.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831040574_e35e4d203b62344c59679c4bf3c86e17.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831040574_e35e4d203b62344c59679c4bf3c86e17.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831040812_6472042c46d53226d6391f96332dab06.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831040812_6472042c46d53226d6391f96332dab06.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831040964_9682621583951be9e43ba82f40ee29d1.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831040964_9682621583951be9e43ba82f40ee29d1.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831055217_58788a2aafef814949c8480c273a277d.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831055217_58788a2aafef814949c8480c273a277d.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831061349_6fc601ef36d7af39bdd86c8772003530.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831061349_6fc601ef36d7af39bdd86c8772003530.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/phong_bep/z7705831062002_d73c283d5a66193e063253ec432e0a27.jpg', 'Bếp & Phòng ăn')">
+                <img src="assets/anhhin/phong_bep/z7705831062002_d73c283d5a66193e063253ec432e0a27.jpg" alt="Bếp"
+                  loading="lazy" /></div>
+            </div>
+            <button class="slider-btn slider-prev" onclick="slideRoom('phong_bep', -1)">‹</button>
+            <button class="slider-btn slider-next" onclick="slideRoom('phong_bep', 1)">›</button>
+            <div class="slider-dots" id="dots-phong_bep"></div>
+          </div>
+          <div class="room-info-bar"><span class="room-badge">🍳 Bếp & Phòng ăn</span><span class="room-count">11
+              ảnh</span></div>
+        </div>
+
+        <!-- VIEW & NGOẠI THẤT -->
+        <div class="room-panel" id="panel-view">
+          <div class="room-hero-slider" id="slider-view">
+            <div class="slider-track" id="track-view">
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831112572_97b2d5843912cb5317068f97fd3f9271.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831112572_97b2d5843912cb5317068f97fd3f9271.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831112905_9e184cdfab4ceb3becba1f4aa363e884.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831112905_9e184cdfab4ceb3becba1f4aa363e884.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831113643_b7914dc27e1c3049cd04cef125df8427.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831113643_b7914dc27e1c3049cd04cef125df8427.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831113766_efdc8af20afbf96b7afbd39b5decb6f1.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831113766_efdc8af20afbf96b7afbd39b5decb6f1.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831113940_fa96344429c86222aa06553653536eec.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831113940_fa96344429c86222aa06553653536eec.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831114107_2fa7b042d3e12162d6f95c25a4f523ea.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831114107_2fa7b042d3e12162d6f95c25a4f523ea.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831114125_a83ab6d6f27f6f03a81b16917b52fce1.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831114125_a83ab6d6f27f6f03a81b16917b52fce1.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831115287_e9c91f5f598aead045421d88fd895d2d.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831115287_e9c91f5f598aead045421d88fd895d2d.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831115403_1d90ea7dc282d006e42a214729a667ee.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831115403_1d90ea7dc282d006e42a214729a667ee.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831116010_3cfec773d1343de8e787225cb3b81820.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831116010_3cfec773d1343de8e787225cb3b81820.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831116220_b1a795cb2d94d7ea051351e543245ba2.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831116220_b1a795cb2d94d7ea051351e543245ba2.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831116980_b8b1bea495f8c9f6f5931fe3dff5d6d3.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831116980_b8b1bea495f8c9f6f5931fe3dff5d6d3.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831117256_37fbc0db7c00309cc29377054700cab0.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831117256_37fbc0db7c00309cc29377054700cab0.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831117721_1862b2a4a732b2c182a8d676aa8fd3a6.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831117721_1862b2a4a732b2c182a8d676aa8fd3a6.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831137585_b646c2bad73d85418a98de70bd719692.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831137585_b646c2bad73d85418a98de70bd719692.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831138610_59ddf41e9dc2f1a36d5eb905e8f086ce.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831138610_59ddf41e9dc2f1a36d5eb905e8f086ce.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831139000_f9dce96cc497c2849864a7ebaadbdc15.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831139000_f9dce96cc497c2849864a7ebaadbdc15.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831139226_79e3ea17a167845ad3cf16d3cc927b1f.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831139226_79e3ea17a167845ad3cf16d3cc927b1f.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831139261_e9a78d9f81bad5af604fa4c14b74a056.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831139261_e9a78d9f81bad5af604fa4c14b74a056.jpg" alt="View"
+                  loading="lazy" /></div>
+              <div class="slide"
+                onclick="openLightbox('assets/anhhin/view/z7705831139331_e1091d7aab8b03bb9463ccce100c42ce.jpg', 'View & Ngoại thất')">
+                <img src="assets/anhhin/view/z7705831139331_e1091d7aab8b03bb9463ccce100c42ce.jpg" alt="View"
+                  loading="lazy" /></div>
+            </div>
+            <button class="slider-btn slider-prev" onclick="slideRoom('view', -1)">‹</button>
+            <button class="slider-btn slider-next" onclick="slideRoom('view', 1)">›</button>
+            <div class="slider-dots" id="dots-view"></div>
+          </div>
+          <div class="room-info-bar"><span class="room-badge">🌿 View & Ngoại thất</span><span class="room-count">20
+              ảnh</span></div>
+        </div>
+
+      </div><!-- end room-panels -->
     </div>
   </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev"
+      onclick="event.stopPropagation(); lightboxNav(-1)">‹</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext"
+      onclick="event.stopPropagation(); lightboxNav(1)">›</button>
+  </div>
 
   <!-- ===== AMENITIES SECTION ===== -->
   <section class="section section-alt" id="amenities">
@@ -302,7 +645,8 @@
           </li>
           <li>
             <h3>🔇 Giữ trật tự</h3>
-            <p>Hạn chế làm ồn, hát karaoke hoặc gây ra các tiếng động lớn. Lưu ý: Quý khách vui lòng kiểm tra tư trang trước khi trả phòng. Home không chịu trách nhiệm sau khi quý khách rời đi.</p>
+            <p>Hạn chế làm ồn, hát karaoke hoặc gây ra các tiếng động lớn. Lưu ý: Quý khách vui lòng kiểm tra tư trang
+              trước khi trả phòng. Home không chịu trách nhiệm sau khi quý khách rời đi.</p>
           </li>
           <li>
             <h3>🐕 Quy định thú cưng</h3>
@@ -340,7 +684,8 @@
             <li>50% còn lại sẽ được thanh toán khi khách làm thủ tục nhận phòng (check-in).</li>
             <li>Đặt phòng chỉ được xem là hoàn tất và giữ phòng khi Hyn's House đã nhận được tiền cọc.</li>
           </ul>
-          <p class="policy-note">👉 Lưu ý: Trường hợp khách không thanh toán đúng hạn (nếu có thỏa thuận trước), Hyn's House có quyền tự động hủy giữ phòng.</p>
+          <p class="policy-note">👉 Lưu ý: Trường hợp khách không thanh toán đúng hạn (nếu có thỏa thuận trước), Hyn's
+            House có quyền tự động hủy giữ phòng.</p>
         </div>
 
         <div class="policy-item">
@@ -351,7 +696,8 @@
             <li><strong>Hủy trong vòng 24 – 48 giờ</strong> trước ngày nhận phòng: Không hoàn tiền cọc</li>
             <li><strong>Không đến (no-show):</strong> Không hoàn tiền (100%)</li>
           </ul>
-          <p class="policy-note">👉 Lưu ý: Thời gian hủy được tính dựa trên thời điểm Hyn's House nhận được thông báo hủy. Việc hoàn tiền (nếu có) sẽ được xử lý trong vòng 1 – 3 ngày làm việc.</p>
+          <p class="policy-note">👉 Lưu ý: Thời gian hủy được tính dựa trên thời điểm Hyn's House nhận được thông báo
+            hủy. Việc hoàn tiền (nếu có) sẽ được xử lý trong vòng 1 – 3 ngày làm việc.</p>
         </div>
 
         <div class="policy-item">
@@ -364,7 +710,8 @@
             <li>Phụ thu khi đổi ngày: 5% trên tổng giá trị đặt phòng</li>
             <li>Mỗi đơn đặt phòng chỉ hỗ trợ đổi ngày tối đa 01 lần</li>
           </ul>
-          <p class="policy-note">👉 Lưu ý: Không áp dụng đổi ngày trong trường hợp khách báo quá sát giờ check-in hoặc vào các dịp cao điểm (lễ, Tết…).</p>
+          <p class="policy-note">👉 Lưu ý: Không áp dụng đổi ngày trong trường hợp khách báo quá sát giờ check-in hoặc
+            vào các dịp cao điểm (lễ, Tết…).</p>
         </div>
 
         <div class="policy-item">
@@ -377,7 +724,8 @@
               <span class="sub-indent">• Trả phòng trễ quá 3 tiếng: tính thêm 1 đêm lưu trú</span>
             </li>
           </ul>
-          <p class="policy-note">👉 Lưu ý: Vui lòng thông báo trước nếu khách có nhu cầu check-in sớm hoặc check-out muộn (tùy tình trạng phòng).</p>
+          <p class="policy-note">👉 Lưu ý: Vui lòng thông báo trước nếu khách có nhu cầu check-in sớm hoặc check-out
+            muộn (tùy tình trạng phòng).</p>
         </div>
 
         <div class="policy-item">
@@ -396,7 +744,8 @@
           <ul class="policy-list">
             <li>Khách vui lòng kiểm tra kỹ thông tin trước khi đặt phòng.</li>
             <li>Khi khách tiến hành đặt cọc, đồng nghĩa với việc đã đồng ý với toàn bộ chính sách của Hyn's House.</li>
-            <li>Hyn's House có quyền từ chối hoàn tiền trong trường hợp khách vi phạm quy định hoặc cung cấp thông tin không chính xác.</li>
+            <li>Hyn's House có quyền từ chối hoàn tiền trong trường hợp khách vi phạm quy định hoặc cung cấp thông tin
+              không chính xác.</li>
           </ul>
         </div>
       </div>
@@ -418,7 +767,7 @@
           <div class="food-emoji">🍜</div>
           <div class="food-info">
             <h4>Bún Chả Cá Bà Lan</h4>
-            <p>Đặc sản Đà Nẵng số 1 · 2 phút đi xe</p>
+            <p><span data-location="bun-cha-ca-distance">Đang tính...</span></p>
             <div class="food-meta">
               <span class="food-price">💰 15–30k</span>
               <span class="food-rating">⭐ 4.8</span>
@@ -429,7 +778,7 @@
           <div class="food-emoji">🦐</div>
           <div class="food-info">
             <h4>Mỳ Quảng Bé Vẹt</h4>
-            <p>Mỳ quảng chuẩn vị quê · 5 phút đi bộ</p>
+            <p><span data-location="mi-quang-distance">Đang tính...</span></p>
             <div class="food-meta">
               <span class="food-price">💰 20–35k</span>
               <span class="food-rating">⭐ 4.7</span>
@@ -440,7 +789,7 @@
           <div class="food-emoji">🥢</div>
           <div class="food-info">
             <h4>Bánh Xèo Bà Dưỡng</h4>
-            <p>Bánh xèo giòn tan, nổi tiếng nhất ĐN · 8 phút</p>
+            <p><span data-location="banh-xeo-distance">Đang tính...</span></p>
             <div class="food-meta">
               <span class="food-price">💰 25–45k</span>
               <span class="food-rating">⭐ 4.9</span>
@@ -451,7 +800,7 @@
           <div class="food-emoji">🦀</div>
           <div class="food-info">
             <h4>Hải Sản Bé Mặn</h4>
-            <p>Hải sản tươi sống, cá chình, tôm hùm · 5 phút</p>
+            <p><span data-location="hai-san-distance">Đang tính...</span></p>
             <div class="food-meta">
               <span class="food-price">💰 150–400k</span>
               <span class="food-rating">⭐ 4.6</span>
@@ -462,7 +811,7 @@
           <div class="food-emoji">☕</div>
           <div class="food-info">
             <h4>Cà Phê Đêm View Biển</h4>
-            <p>Cà phê sáng view Mỹ Khê · ngay trước nhà</p>
+            <p><span data-location="ca-phe-distance">Đang tính...</span></p>
             <div class="food-meta">
               <span class="food-price">💰 25–55k</span>
               <span class="food-rating">⭐ 4.8</span>
@@ -473,7 +822,7 @@
           <div class="food-emoji">🍺</div>
           <div class="food-info">
             <h4>Bia Tươi Sân Vườn</h4>
-            <p>Nhậu vỉa hè, bia hơi, đồ nướng · 3 phút</p>
+            <p><span data-location="bia-tuoi-distance">Đang tính...</span></p>
             <div class="food-meta">
               <span class="food-price">💰 50–150k</span>
               <span class="food-rating">⭐ 4.5</span>
@@ -501,7 +850,7 @@
             <h4>Bãi Biển Mỹ Khê</h4>
             <p>Một trong những bãi biển đẹp nhất châu Á. Nước trong, sóng vừa, bãi cát phẳng.</p>
             <div class="place-footer">
-              <span class="place-dist">📍 50m từ homestay</span>
+              <span class="place-dist" data-location="beach-distance">📍 3.3km · 8 phút Grab</span>
               <span class="place-free">🆓 Miễn phí</span>
             </div>
           </div>
@@ -514,7 +863,7 @@
             <h4>Ngũ Hành Sơn</h4>
             <p>5 ngọn núi đá cẩm thạch huyền bí, chùa chiền, hang động và tượng Phật.</p>
             <div class="place-footer">
-              <span class="place-dist">📍 2km · 5 phút</span>
+              <span class="place-dist" data-location="ngu-hanh-son-distance">📍 Đang tính...</span>
               <span class="place-fee">🎟️ 40.000 ₫</span>
             </div>
           </div>
@@ -527,7 +876,7 @@
             <h4>Cầu Rồng</h4>
             <p>Biểu tượng Đà Nẵng. Cuối tuần phun lửa & nước lúc 21:00. Chụp ảnh cực đẹp.</p>
             <div class="place-footer">
-              <span class="place-dist">📍 8km · 15 phút</span>
+              <span class="place-dist" data-location="cau-rong-distance">📍 Đang tính...</span>
               <span class="place-free">🆓 Miễn phí</span>
             </div>
           </div>
@@ -540,7 +889,7 @@
             <h4>Hội An Phố Cổ</h4>
             <p>Di sản UNESCO. Đèn lồng, phố đi bộ, thuyền sông Thu Bồn, ẩm thực đặc sắc.</p>
             <div class="place-footer">
-              <span class="place-dist">📍 30km · 35 phút</span>
+              <span class="place-dist" data-location="hoi-an-distance">📍 Đang tính...</span>
               <span class="place-fee">🎟️ 120.000 ₫</span>
             </div>
           </div>
@@ -553,7 +902,7 @@
             <h4>Bà Nà Hills</h4>
             <p>Cáp treo dài nhất thế giới. Cầu Vàng, Làng Pháp, công viên giải trí trên mây.</p>
             <div class="place-footer">
-              <span class="place-dist">📍 25km · 40 phút</span>
+              <span class="place-dist" data-location="ba-na-distance">📍 Đang tính...</span>
               <span class="place-fee">🎟️ 750.000 ₫</span>
             </div>
           </div>
@@ -566,7 +915,7 @@
             <h4>Chợ Hàn & Cồn</h4>
             <p>Mua sắm đặc sản Đà Nẵng, tôm khô, mắm nêm, bánh tráng cuốn thịt heo.</p>
             <div class="place-footer">
-              <span class="place-dist">📍 10km · 20 phút</span>
+              <span class="place-dist" data-location="cho-han-distance">📍 Đang tính...</span>
               <span class="place-free">🆓 Miễn phí</span>
             </div>
           </div>
@@ -585,9 +934,9 @@
       <div class="location-wrapper">
         <div class="map-container">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7!2d108.2575!3d15.9671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421275d9952e5b%3A0x6ac82b9fc7de1ee4!2sNg%C5%A9%20H%C3%A0nh%20S%C6%A1n%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng%2C%20Vietnam!5e0!3m2!1sen!2s!4v1617000000000!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.6555555!2d108.22065!3d15.97444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314212a8c5c5c5c5%3A0x1234567890abcdef!2s57%2F6%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20%C4%90%C3%A0%20N%E1%BA%B5ng!5e0!3m2!1sen!2s!4v1617000000000!5m2!1sen!2s"
             width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Vị trí beHin Homestay">
+            referrerpolicy="no-referrer-when-downgrade" title="57/6 Lê Hồng Phong, Đà Nẵng">
           </iframe>
         </div>
         <div class="location-info">
@@ -595,39 +944,33 @@
             <div class="loc-icon">📍</div>
             <div>
               <strong>Địa chỉ</strong>
-              <p>Ngũ Hành Sơn, Đà Nẵng<br />(chi tiết gửi sau khi xác nhận)</p>
+              <p>57/6 Lê Hồng Phong, Phước Ninh<br />Hải Châu, Đà Nẵng 550000</p>
             </div>
           </div>
           <div class="loc-item">
             <div class="loc-icon">✈️</div>
             <div>
               <strong>Sân bay Đà Nẵng</strong>
-              <p>Cách 12km · ~20 phút taxi<br />Giá taxi: 150–200k ₫</p>
+              <p data-location="airport-distance">📍 Đang tính...</p>
             </div>
           </div>
           <div class="loc-item">
             <div class="loc-icon">🏖️</div>
             <div>
               <strong>Bãi biển Mỹ Khê</strong>
-              <p>Cách 50m · đi bộ 1 phút</p>
+              <p data-location="beach-distance">📍 3.3km · 8 phút Grab</p>
             </div>
           </div>
           <div class="loc-item">
             <div class="loc-icon">🏪</div>
             <div>
               <strong>Tiện ích gần nhà</strong>
-              <p>Circle K · 100m | AEON · 2km<br />Cửa hàng tiện lợi · 50m</p>
-            </div>
-          </div>
-          <div class="loc-item">
-            <div class="loc-icon">🚗</div>
-            <div>
-              <strong>Di chuyển</strong>
-              <p>Thuê xe máy: 120k/ngày<br />Grab/Taxi: luôn có sẵn</p>
+              <p>Circle K · 150m | Com tam thơm · 80m<br />Cà phê đường de Lattre · 200m</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -654,16 +997,17 @@
           <div class="contact-icon">💬</div>
           <div class="contact-info">
             <strong>Zalo</strong>
-            <span>0905 123 456</span>
+            <span>093 489 45 41</span>
             <span class="contact-note">Nhắn tin nhanh nhất</span>
           </div>
           <span class="contact-arrow">→</span>
         </a>
-        <a href="https://m.me/behinhomestay" target="_blank" class="contact-card contact-card--fb">
+        <a href="https://www.facebook.com/profile.php?id=61573476444459" target="_blank"
+          class="contact-card contact-card--fb">
           <div class="contact-icon">💙</div>
           <div class="contact-info">
             <strong>Facebook</strong>
-            <span>beHin Homestay</span>
+            <span>Hyn's House</span>
             <span class="contact-note">Fanpage chính thức</span>
           </div>
           <span class="contact-arrow">→</span>
@@ -685,13 +1029,6 @@
         <div class="host-info">
           <h4>Chủ nhà: Thanh Hà</h4>
           <p>Siêu chủ nhà · Đà Nẵng · Thành viên từ 2020</p>
-          <div class="host-stats">
-            <span>⭐ 4.98 đánh giá</span>
-            <span>•</span>
-            <span>128 lượt đặt</span>
-            <span>•</span>
-            <span>⚡ Phản hồi trong 1h</span>
-          </div>
           <p class="host-bio">"Mình yêu Đà Nẵng và muốn chia sẻ vẻ đẹp của thành phố này đến mọi người. Hy vọng căn
             villa nhỏ của mình sẽ là nơi lưu giữ những kỷ niệm đẹp của bạn! 🌊"</p>
         </div>
@@ -709,9 +1046,9 @@
             stroke-width="1.5" />
           <circle cx="16" cy="11" r="2.5" fill="#C9A96E" />
         </svg>
-        <span>beHin</span>
+        <span>Hyn’s House</span>
       </div>
-      <p>© 2026 beHin · Luxury Homestay Vietnam · Đà Nẵng</p>
+      <p>© 2026 Hyn’s House · Luxury Homestay Vietnam · Đà Nẵng</p>
       <div class="footer-links">
         <a href="#">Chính sách hoàn tiền</a>
         <a href="#">Điều khoản</a>
@@ -722,12 +1059,12 @@
 
   <!-- Floating contact buttons -->
   <div class="float-contacts">
-    <a href="https://zalo.me/0905123456" target="_blank" class="float-btn float-btn--zalo" title="Zalo">
+    <a href="https://zalo.me/093 489 45 41" target="_blank" class="float-btn float-btn--zalo" title="Zalo">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
       </svg>
     </a>
-    <a href="tel:+84905123456" class="float-btn float-btn--phone" title="Gọi ngay">
+    <a href="tel:+8493 489 45 41" class="float-btn float-btn--phone" title="Gọi ngay">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
         <path
           d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 11.82a19.79 19.79 0 01-3.07-8.67A2 2 0 011.91 1H5a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91A16 16 0 0015.1 17.91l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
@@ -738,6 +1075,8 @@
   <!-- Back to top -->
   <button class="back-top hidden" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
+  <!-- Google Maps Distance Matrix API Script -->
+  <script src="distance-calculator.js"></script>
   <script src="dashboard.js"></script>
 </body>
 

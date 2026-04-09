@@ -200,6 +200,73 @@ Edit `style.css` - `.overlay` and `.depth-layer`:
 
 ---
 
+## 🗺️ OSRM Distance Calculator – Hoàn Toàn MIỄN PHÍ
+
+### 🔍 What It Does
+Trang web tự động tính khoảng cách **chính xác từ OSRM** (OpenStreetMap Routing Machine) từ homestay (57/6 Lê Hồng Phong, Đà Nẵng) đến:
+- ✈️ Sân bay
+- 🏖️ Bãi biển
+- ⛰️ Điểm du lịch
+- 🍜 Nhà hàng gần nhà
+
+### ⚙️ How It Works
+1. Khi trang load, `distance-calculator.js` gọi **OSRM API** (OpenStreetMap dữ liệu mở)
+2. OSRM tính khoảng cách & thời gian di chuyển từ homestead tới từng địa điểm
+3. Khoảng cách tự động hiển thị trên trang (ví dụ: "📍 3.3km · 10 phút")
+4. Không cần cấu hình API key, hoàn toàn MIỄN PHÍ!
+
+### ✅ Ưu Điểm So Với Google Maps API
+| Tính Năng | OSRM (Hiện tại) | Google Maps |
+|-----------|---|---|
+| **Chi Phí** | 🆓 **MIỄN PHÍ** | 💰 ~$5/tháng |
+| **API Key** | ❌ Không cần | ✅ Cần |
+| **Giới Hạn** | ❌ Không có | ✅ Có limit |
+| **Setup** | ⚡ Không cần config | 🔧 Cần config |
+| **Chính Xác** | ✅ Like Google Maps | ✅ Chính xác nhất |
+| **Source** | 🌍 OpenStreetMap (Mã mở) | 🔒 Google (Proprietary) |
+
+### 🚀 Không Cần Config, Dùng Ngay!
+**Không cần làm gì cả!** Trang web đã sẵn sàng:
+1. Reload trang (F5)
+2. Mở Console (F12)
+3. Xem khoảng cách được cập nhật tự động ✅
+
+### 🌐 Dữ Liệu Dùng
+- **OSRM Server**: https://router.project-osrm.org (miễn phí public)
+- **Map Data**: OpenStreetMap (cập nhật liên tục)
+- **Routing Algorithm**: OSRM (chính xác như GPS)
+
+### 📍 Tọa Độ Landmarks
+Tất cả tọa độ được lưu trong `distance-calculator.js`:
+```javascript
+const DESTINATIONS = {
+  'beach': { lat: 15.9840, lng: 108.2300 },
+  'ngu_hanh_son': { lat: 15.94, lng: 108.22 },
+  // ... more destinations
+};
+```
+
+### 🧪 Kiểm Tra Hoạt Động
+1. Reload trang (F5)
+2. Mở DevTools (F12) → Console
+3. Xem thông báo: `✅ Khoảng cách đã được cập nhật từ OSRM (OpenStreetMap)`
+4. Thế là xong! Không cần làm gì thêm 🎉
+
+### 💡 Tương Lai: Self-Host OSRM (Optional)
+Nếu bạn muốn tốc độ nhanh hơn trong production:
+1. Host riêng OSRM server: https://github.com/Project-OSRM/osrm-backend
+2. Cập nhật URL trong `distance-calculator.js`:
+   ```javascript
+   // Thay URL public thành URL riêng
+   const url = `https://your-osrm-server.com/route/v1/driving/...`;
+   ```
+
+---
+
+## 📁 File Structure
+
+---
+
 ## 🎯 Best Practices
 
 ### Image Selection
