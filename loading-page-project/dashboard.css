@@ -519,7 +519,7 @@ a { text-decoration: none; color: inherit; }
 
 .amenity-card {
   background: var(--bg);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-md);
   padding: 20px 12px;
   display: flex;
@@ -527,14 +527,17 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   gap: 8px;
   text-align: center;
-  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s, background 0.2s;
   cursor: default;
+  min-height: 120px;
+  justify-content: center;
 }
 
 .amenity-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--teal);
+  background: linear-gradient(135deg, rgba(26,143,168,0.04) 0%, rgba(13,211,197,0.02) 100%);
 }
 
 .amenity-icon { font-size: 26px; }
@@ -567,6 +570,17 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid var(--border);
   font-size: 14px;
   color: var(--text);
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.price-row span:first-child {
+  flex: 1;
+  min-width: 140px;
+}
+
+.price-row span:last-child {
+  white-space: nowrap;
 }
 
 .price-row:last-child { border-bottom: none; }
@@ -641,10 +655,11 @@ a { text-decoration: none; color: inherit; }
 
 .policy-item {
   padding: 28px;
-  background: linear-gradient(135deg, rgba(201,169,110,0.04) 0%, rgba(201,169,110,0.02) 100%);
-  border: 1px solid rgba(201,169,110,0.12);
+  background: linear-gradient(135deg, rgba(201,169,110,0.08) 0%, rgba(201,169,110,0.03) 100%);
+  border: 2px solid rgba(201,169,110,0.15);
   border-radius: var(--radius-lg);
   transition: all 0.3s var(--easing);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 .policy-item:hover {
@@ -1403,11 +1418,11 @@ a { text-decoration: none; color: inherit; }
   .room-badge { font-size: 14px; }
 
   /* Amenities */
-  .amenities-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .amenity-card { padding: 16px 10px; }
-  .amenity-icon { font-size: 22px; }
-  .amenity-name { font-size: 11px; }
-  .amenity-desc { font-size: 10px; }
+  .amenities-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .amenity-card { padding: 18px 12px; min-height: 130px; }
+  .amenity-icon { font-size: 24px; }
+  .amenity-name { font-size: 12px; font-weight: 600; }
+  .amenity-desc { font-size: 11px; margin-top: 2px; }
 
   /* Pricing */
   .pricing-section { padding: 20px 18px; }
@@ -1503,17 +1518,35 @@ a { text-decoration: none; color: inherit; }
   .room-count { font-size: 11px; }
 
   /* Amenities */
-  .amenities-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .amenity-card { padding: 14px 8px; }
+  .amenities-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .amenity-card { padding: 16px 10px; min-height: 110px; }
+  .amenity-icon { font-size: 24px; }
+  .amenity-name { font-size: 13px; }
+  .amenity-desc { font-size: 12px; }
 
   /* Pricing */
-  .pricing-section { padding: 16px 14px; }
-  .price-row { font-size: 12px; padding: 10px 0; }
-  .price-val { font-size: 12px; }
+  .pricing-section { padding: 20px 16px; border-radius: var(--radius-md); }
+  .pricing-title { font-size: 18px; margin-bottom: 16px; }
+  .price-row { font-size: 13px; padding: 12px 0; }
+  .price-row span:first-child { min-width: 120px; }
+  .price-val { font-size: 13px; }
+  .price-row--highlight { margin: 0 -8px; padding: 12px 8px; }
+
+  /* Rules */
+  .rules-list-numbered li { padding: 16px 0; }
+  .rules-list-numbered h3 { font-size: 15px; margin-bottom: 6px; }
+  .rules-list-numbered p { font-size: 13px; line-height: 1.5; }
+
+  /* Policy */
+  .policy-content { gap: 16px; }
+  .policy-item { padding: 20px 16px; }
+  .policy-item h3 { font-size: 15px; }
+  .policy-item p { font-size: 13px; }
 
   /* Section */
-  .section { padding: 48px 0; }
-  .section-title { font-size: 26px; }
+  .section { padding: 40px 0; }
+  .section-title { font-size: 24px; }
+  .section-sub { font-size: 14px; }
 
   /* Places */
   .places-grid { grid-template-columns: 1fr; }
@@ -1525,9 +1558,7 @@ a { text-decoration: none; color: inherit; }
 
   /* Location */
   .map-container iframe { height: 240px; }
-
-  /* Policy */
-  .policy-content { gap: 16px; }
+}
   .policy-item { padding: 16px; border-radius: var(--radius-md); }
 
   /* Contact */

@@ -5,7 +5,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── switchBanner – thumbnail click to swap main image ── */
+  /* ── Banner state & logic ── */
+  const bannerThumbEls = document.querySelectorAll('.banner-thumb');
+  const bannerSrcs = [...bannerThumbEls].map(t => t.querySelector('img')?.src);
+  let currentBannerIdx = 0;
+
   window.switchBanner = function(src, thumbEl) {
     const bannerImg = document.getElementById('bannerImg');
     if (bannerImg) {
@@ -18,20 +22,29 @@ document.addEventListener('DOMContentLoaded', () => {
         bannerImg.style.transform = 'scale(1)';
       }, 200);
     }
-    document.querySelectorAll('.banner-thumb').forEach(t => t.classList.remove('active'));
-    if (thumbEl) thumbEl.classList.add('active');
+    bannerThumbEls.forEach((t, idx) => {
+      const isActive = t === thumbEl;
+      t.classList.toggle('active', isActive);
+      if (isActive) currentBannerIdx = idx;
+    });
+    // Reset auto-slide timer if manual switch happens
+    resetBannerTimer();
   };
 
-  /* ── Auto-slideshow every 5s ── */
-  const thumbEls = document.querySelectorAll('.banner-thumb');
-  if (thumbEls.length > 0) {
-    let slideIdx = 0;
-    const srcs = [...thumbEls].map(t => t.querySelector('img')?.src);
-    setInterval(() => {
-      slideIdx = (slideIdx + 1) % srcs.length;
-      if (srcs[slideIdx]) switchBanner(srcs[slideIdx], thumbEls[slideIdx]);
-    }, 5000);
+  /* ── Banner Auto-slideshow ── */
+  let bannerInterval;
+  function startBannerTimer() {
+    if (bannerThumbEls.length === 0) return;
+    bannerInterval = setInterval(() => {
+      currentBannerIdx = (currentBannerIdx + 1) % bannerSrcs.length;
+      switchBanner(bannerSrcs[currentBannerIdx], bannerThumbEls[currentBannerIdx]);
+    }, 6000); // Increased to 6s for better reading
   }
+  function resetBannerTimer() {
+    clearInterval(bannerInterval);
+    startBannerTimer();
+  }
+  startBannerTimer();
 
   /* ── Header scroll effect ── */
   const header = document.getElementById('header');
@@ -331,6 +344,21 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     }
   });
+
+  // Attach swipe to Hero Banner
+  const bannerWrap = document.querySelector('.banner-wrap');
+  if (bannerWrap) {
+    addSwipe(bannerWrap,
+      () => { // swipe left -> next
+        const next = (currentBannerIdx + 1) % bannerSrcs.length;
+        switchBanner(bannerSrcs[next], bannerThumbEls[next]);
+      },
+      () => { // swipe right -> prev
+        const prev = (currentBannerIdx - 1 + bannerSrcs.length) % bannerSrcs.length;
+        switchBanner(bannerSrcs[prev], bannerThumbEls[prev]);
+      }
+    );
+  }
 
   // Attach swipe to lightbox
   const lightboxEl = document.getElementById('lightboxOverlay');
