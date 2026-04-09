@@ -1410,12 +1410,16 @@ a { text-decoration: none; color: inherit; }
     justify-content: flex-start;
     overflow-x: auto;
     flex-wrap: nowrap;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
+    margin: 0 -8px;
+    padding-left: 8px;
+    padding-right: 8px;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    scrollbar-width: thin;
   }
-  .room-tabs::-webkit-scrollbar { display: none; }
-  .room-tab { flex-shrink: 0; font-size: 12px; padding: 8px 16px; }
+  .room-tabs::-webkit-scrollbar { height: 4px; }
+  .room-tabs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  .room-tab { flex-shrink: 0; font-size: 12px; padding: 9px 18px; }
   .room-hero-slider { height: 300px; border-radius: var(--radius-md); }
   .slider-btn { width: 38px; height: 38px; font-size: 20px; }
   .slider-prev { left: 10px; }
@@ -1517,8 +1521,21 @@ a { text-decoration: none; color: inherit; }
 
   /* Gallery */
   .room-hero-slider { height: 240px; border-radius: var(--radius-sm); }
-  .room-tabs { gap: 5px; }
-  .room-tab { font-size: 11px; padding: 7px 12px; }
+  .room-tabs {
+    gap: 6px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    margin: 0 -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .room-tabs::-webkit-scrollbar { height: 4px; }
+  .room-tabs::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  .room-tab { flex-shrink: 0; font-size: 11px; padding: 8px 14px; white-space: nowrap; }
   .slider-btn { width: 34px; height: 34px; font-size: 18px; }
   .slider-prev { left: 6px; }
   .slider-next { right: 6px; }
@@ -1589,9 +1606,27 @@ a { text-decoration: none; color: inherit; }
 .room-tabs {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   margin-bottom: 28px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.room-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.room-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.room-tabs::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
 }
 
 .room-tab {
@@ -1605,6 +1640,7 @@ a { text-decoration: none; color: inherit; }
   cursor: pointer;
   transition: all 0.22s var(--easing);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .room-tab:hover {
